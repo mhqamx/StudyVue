@@ -13,7 +13,7 @@
         <h4 v-text ="msg2">123</h4>
         <p v-html = "msg3"> </p>
         <input type="button" v-bind:value="msg3" v-bind:title="msg + '123'">
-        <input type="button" value="按钮" v-on:click = "show">
+        <input type="button" value="按钮" @:click = "show">
     </div>
 
     <script>
@@ -24,6 +24,7 @@
             msg2:'hiha',
             msg3:'<h1> H1 Title </h1>'
         },
+    
         methods:{
             show:function(){
                 alert('Hello')
@@ -35,3 +36,9 @@
 
 </body>
 </html>
+<!--  1.如何定义一个基本的vue代码结构  -->
+<!--  2.差值表达式和v-text  -->
+<!--  3.v-cloak   -->
+<!--  4.v-html    -->
+<!--  5.v-bind  Vue提供的属性绑定机制 缩写 :  -->
+<!--  6.v-on    Vue事件绑定机制 缩写: @   -->
