@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue-2.6.10/dist/vue.js"></script>
+    <style>
+        .inner {
+            height: 150px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="inner" @click="divHandler">
+            <!--  使用 .stop 来阻止冒泡 -->
+                <input type="button" value="dian" @click.stop="btnHandler">
+            </div>
+        <!--  使用.prevent 阻止默认行为  -->
+        <a href="http://www.baidu.com" @click.prevent="linkClick">有问题 先百度</a>
+
+            
+    </div>
+
+    <script>
+        // 创建 Vue 实例, 得到ViewModel
+    var vm = new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            btnHandler(){
+                console.log('button')
+            },
+            divHandler() {
+                console.log('div')
+            },
+            linkClick(){
+                console.log('触发了link点击事件')
+            }
+        }
+    })
+    
+    
+    </script>
+</body>
+</html>
