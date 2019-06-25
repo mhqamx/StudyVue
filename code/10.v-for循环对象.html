@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue-2.6.10/dist/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <!-- 在遍历对象的键值对的时候, 除了有key, value之外,在第三个位置还有一个索引 -->
+        <p v-for="(vale, key, index) in user">{{vale}}------{{key}}----{{index}}</p>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                user:{
+                    id:1,
+                    name:'max',
+                    age:26,
+                    gender:'male'
+                }
+            },
+            methods:{
+
+            }
+        })
+    
+    </script>
+
+</body>
+</html>
