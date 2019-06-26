@@ -20,9 +20,13 @@
 
             <input type="button" value="添加" @click="add">
         </div>
+<<<<<<< HEAD
         <!-- v-for 循环的时候 key属性只能使用number获取string -->
         <!-- v-for key在使用的时候必须使用v-bind属性绑定的姓氏, 指定key的值 -->
         <!-- 在组件中,使用v-for循环的时候, 或者在一些特殊情况中, 如果v-for有问题, 必须在使用v-for的同时, 指定唯一的字符串/数字 类型:key值 -->
+=======
+
+>>>>>>> 6f4426a98b3b534e8a7d10a15a413345377c41aa
         <p v-for="item in list" :key="item.id">
             <input type="checkbox">
             {{item.id}} ----- {{item.name}}
